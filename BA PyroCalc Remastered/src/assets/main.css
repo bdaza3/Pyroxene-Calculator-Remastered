@@ -13,7 +13,7 @@
 body{
   overflow-y: auto;
   height: 100%; /* Full height for the page */
-  margin: 0; /* Remove default margin */
+  margin: 0; 
   display: flex; /* Use Flexbox for layout */
   flex-direction: column; /* Stack content vertically */
 }
