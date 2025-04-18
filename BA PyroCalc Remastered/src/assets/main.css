@@ -402,7 +402,12 @@ section{
   margin-top: 2rem;
 }
 
-
+@media (max-width: 1024px) { /* smaller screens aka iphone*/
+  .footer{
+    font-size: 1.2vh; /* Adjust font size for smaller screens */
+    padding: 1vh 0; /* Adjust padding for smaller screens */
+  }
+}
 
 .section-title{
   background: linear-gradient(to right, rgb(0, 157, 255),rgb(255, 0, 255));
@@ -411,7 +416,7 @@ section{
 }
 .description{
   text-align: center; /* Center text horizontally */
-  margin-left: 2vh;
+  margin-left: 3vi;
 }
 
 #calculator {
@@ -424,9 +429,9 @@ section{
 }
 
 .calculator-image{
-  width: 60vh;
-  height: 20vh;
-  margin-left: 2vh;
+  width: 60vi;
+  height: 20vi;
+  margin-left: 3vh;
 }
 
 .calc-inputs{
@@ -473,11 +478,19 @@ section{
   border: 1px solid gray;
   border-radius: 5px;
   color: white;
+  font-size: 1rem; /* Set the font size */
+}
+
+@media (max-width: 1024px) { /* smaller screens aka iphone*/
+  .check-inputs{
+    font-size: 2vh;
+  }
 }
 
 .check-inputs label{
   font-size: 16px; /* Set the label text size */
 }
+
 
 .check-inputs input{
   margin-right: 10px; /* Add spacing between the input and label */
@@ -923,7 +936,8 @@ section{
           flex-direction: column;
       }
       .assumptions{
-        margin-left: 15vh;
+        margin-left: 6vh;
+        font-size: 1.5vh;
       }
   }
 
@@ -932,7 +946,7 @@ section{
   padding: 0.8rem 2rem;
   background-color: #49CAFF; /* Button background color */
   color: #192F5E; /* Text color */
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   border-radius: 0.5rem; /* Rounded corners */
@@ -940,6 +954,12 @@ section{
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 1024px) { /* smaller screens aka iphone*/
+  #upcoming-banner-btn{
+    font-size: 2vh;
+  }
+}
+
   #upcoming-banner-btn:hover {
   background-color: #49CAFF; /* Darker background on hover */
   transform: scale(1.005) skew(-8deg); /* Slightly enlarge on hover add a shadow below button*/
@@ -1006,6 +1026,13 @@ section{
   background-color: #343434;
 }
 
+@media (max-width: 1024px) { /* smaller screens aka iphone*/
+  .calc-table th, .calc-table td {
+    padding: 1vh; /* Adjust padding for smaller screens */
+    font-size: 1.5vh; /* Adjust font size for smaller screens */
+  }
+}
+
 .calc-image-container {
   display: flex;
   align-items: center;
@@ -1041,6 +1068,12 @@ section{
   transform: skew(-8deg); /* Parallelogram effect */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1024px) { /* smaller screens aka iphone*/
+  #calculate-btn{
+    font-size: 2vh;
+  }
 }
 
 #calculate-btn:hover {

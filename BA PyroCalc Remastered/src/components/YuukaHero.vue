@@ -123,12 +123,11 @@ h6{
   .greetings h3 {
     text-align: left;
   }
-}
 .background-video {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 80%;
+  height: 70%;
   object-fit: fill;
   z-index: -2; /* Ensure the video is behind the text */
 }
@@ -143,5 +142,43 @@ h6{
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
   z-index: -1; /* Ensure the gradient is above the video but below the text */
 }
+}
 
+@media (max-width: 1024px) { /* smaller screens aka iphone*/
+.calculator-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-left: 0;
+}
+p, h2, h3{
+  font-size: 1.5vh;
+  color: white;
+  font-style: italic;
+}
+h6{
+  font-size: 0.9vh;
+  color: white;
+  font-style: italic;
+}
+.background-video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: fill;
+  z-index: -2; /* Ensure the video is behind the text */
+}
+/* Add a gradient overlay to make the bottom half transparent */
+.video::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+  z-index: -1; /* Ensure the gradient is above the video but below the text */
+}
+}
 </style>
