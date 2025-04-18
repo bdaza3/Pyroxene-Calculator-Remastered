@@ -1,0 +1,1215 @@
+@import "./base.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial';
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+body{
+  overflow-y: auto;
+  height: 100%; /* Full height for the page */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7rem;
+  /*background: rgb(74, 183, 255);*/
+  background: linear-gradient(to left, rgb(0, 123, 255), rgb(0, 217, 255));
+  width: 100%;
+  z-index: 1000;
+  height: 8vh;
+}
+
+.arona-img {
+  width: 7.5vh; /* Adjust the width as needed */
+  height: 7.5vh; /* Adjust the height as needed */
+  margin-right: 1rem; /* Add some space between the image and text */
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute; /* Position it relative to the icon */
+  top: 50px; /* Adjust to appear below the icon */
+  right: 10px; /* Align to the right of the header */
+  background-color: lightgray;
+  border: 2px solid #ccc; /* Add a border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure it appears above other elements */
+  padding: 10px;
+  width: 150px; /* Set a fixed width */
+}
+
+/* Style the dropdown menu items */
+.dropdown-menu a,
+.dropdown-menu button {
+  display: block; /* Make each item take up full width */
+  padding: 10px;
+  text-decoration: none; /* Remove underline for links */
+  color: black; /* Text color */
+  font-size: 14px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Add hover effect for dropdown items */
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+/* Dark mode styles (optional) */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .dropdown-menu a:hover,
+body.dark-mode .dropdown-menu button:hover {
+  background-color: #444;
+}
+
+body.dark-mode .assumptions, body.dark-mode .calculations, body.dark-mode .calc-table, body.dark-mode .calc-table tr, body.dark-mode .calc-table td{
+  background: #333;
+  color: white;
+}
+
+body.dark-mode .calc-table th{/* table header */
+  background: #444;
+}
+
+
+
+
+.logo{
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.nav-links{
+  margin-left: auto;
+  display: flex;
+  gap: 2rem;
+  align-items: right;
+  padding: 0.5rem 1rem;
+}
+.aboutbtn{
+  background-color: transparent; border-width: 0; font-size: 2vh; color: white;
+}
+.aboutbtn:hover{
+  transform: scale(1.2);
+  background-color: transparent;
+  color: white;
+}
+li a{
+  position: relative;
+  color: black;
+  font-weight: 300;
+}
+li a::before{
+  position: absolute;
+  content: '';
+  width: 0;
+  left: 0;
+  height: 2px;
+  top: 20px;
+  transition: 0.2s ease-in-out;
+  background: white;
+}
+li a:hover::before{
+  width: 100%;
+}
+
+.visit-btn{
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+
+}
+
+.visit-btn:hover{
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+  transform: scale(1.03);
+}
+
+#menu-icon{
+  font-size: 2rem;
+  display: none;
+}
+
+section{
+  min-height: 100vh;
+  padding: 8rem 12%;
+  width: 100%;
+  position: relative;
+}
+
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .about-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.about img{
+  width: 30vw;
+  border-radius: 50%;
+}
+
+.info-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.info-box h3{
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.info-box h1{
+  font-size: 4rem;
+  font-weight: 600;
+}
+.info-box span{
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+}
+.btn-group{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  text-wrap: nowrap;
+  transition: 0.2s ease-in-out;
+  background-color: white;
+  color: black;
+}
+.btn:hover{
+  background: rgb(0, 162, 255);
+  color: white;
+}
+.btn:disabled{
+  background: lightgray;
+  color: black;
+  cursor: not-allowed;
+}
+.socials{
+  display: flex;
+  gap: 2rem;
+}
+.socials i{
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.socials i:hover{
+  transform: scale(1.1);
+}
+
+.section-title{
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.experience-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.experience img{
+  width: 24vw;
+  border-radius: 3rem;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.grid-card{
+  border: 2px solid black;
+  border-radius: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.grid-card:hover{
+  transform: scale(1.02);
+  background: black;
+  color: white;
+}
+
+.grid-card i{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.grid-card span{
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: linear-gradient(to right, rgb(0, 157, 255),rgb(255, 0, 255));
+  background-clip: text;
+  color: transparent;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: white;
+}
+::-webkit-scrollbar-thumb{
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.project-card{
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  border: 2px solid black;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;  
+}
+.project-card:hover{
+  transform: translateY(-10px)scale(1.02);
+  background: black;
+  color: white;
+}
+.project-card img{
+  width: 20vw;
+  border-radius: 1rem;
+}
+.project-card:hover .btn{
+  border: 2px solid white;
+  color: white;
+}
+.project-card:hover .btn:hover{
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+}
+.project-card h3{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.input-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.input-box input{
+  border-radius: 3rem;
+  border: 2px solid black;
+  padding: 2rem 8rem;
+  font-size: 3rem;
+}
+.input-box input::placeholder{
+  font-size: 3rem;
+}
+.input{
+  position: relative;
+}
+.input i{
+  position: absolute;
+  font-size: 4rem;
+  top: 50%;
+  left: 10px;
+  transform: translate(50%, -50%);
+}
+.footer {
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%; /* Ensure the footer spans the full width */
+  background-color: #f9f9f9c3; /* Light background color */
+  text-align: center; /* Center the text */
+  padding: 1rem 0; /* Add padding for spacing */
+  font-size: 0.7rem; /* Slightly smaller font size */
+  color: #333; /* Text color */
+  border-top: 1px solid #ddd; /* Optional: Add a top border */
+}
+.copyright{
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+
+
+.section-title{
+  background: linear-gradient(to right, rgb(0, 157, 255),rgb(255, 0, 255));
+  background-clip: text;
+  color: transparent;
+}
+.description{
+  text-align: center; /* Center text horizontally */
+  margin-left: 2vh;
+}
+
+#calculator {
+  display: flex; /* Use Flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text inside the section */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.calculator-image{
+  width: 60vh;
+  height: 20vh;
+  margin-left: 2vh;
+}
+
+.calc-inputs{
+  display: flex; /* Use Flexbox for alignment */
+  gap: 5vh; /* Add spacing between inputs */
+  margin-top: 0.5vh; /* Add spacing from the top */
+}
+
+.packs{
+  display: flex; /* Use Flexbox for alignment */
+  gap: 5vh; /* Add spacing between inputs */
+  margin-top: 0.5vh; /* Add spacing from the top */
+  margin-bottom: 2vh;
+}
+
+.input{
+  position: relative; /* Position the icon relative to the input */
+}
+
+.input i{
+  position: absolute; /* Position the icon absolutely */
+  font-size: 20px; /* Set the icon size */
+  top: 50%; /* Align the icon vertically */
+  left: 10px; /* Align the icon horizontally */
+  transform: translateY(-50%); /* Center the icon vertically */
+}
+
+.input input{
+  padding: 10px 20px; /* Add padding inside the input */
+  font-size: 16px; /* Set the input text size */
+}
+
+.input input::placeholder{
+  font-size: 16px; /* Set the placeholder text size */
+}
+
+.check-inputs{
+  display: flex; /* Use Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  gap: 0.5vh; /* Add spacing between inputs */
+  margin-top: 0.4vh; /* Add spacing from the top */
+  padding: 0.8vh; /* Add padding for spacing */
+  background-color: #343434;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: white;
+}
+
+.check-inputs label{
+  font-size: 16px; /* Set the label text size */
+}
+
+.check-inputs input{
+  margin-right: 10px; /* Add spacing between the input and label */
+}
+
+.side-image{
+  width: 5vh; 
+  height: 4vh;
+}
+
+.image-container{
+  position: relative;
+  display: inline-block;
+  background-color: #363636;
+  background-image: url("Item_Card.png"); /* Set the background image */
+  background-size: 8vh; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  border-radius: 1vh;
+}
+.number-box{
+  position: absolute;
+  bottom: -1.02vh; /* Position the box slightly below the image */
+  left: 50%; /* Center the box horizontally under the image */
+  transform: translateX(-50%); /* Adjust for centering */
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  font-size: 1.3vh; /* Adjust text size */
+  font-weight: bold; /* Make the text bold */
+  padding: 0.12vh 0.5vh; /* Add padding inside the box */
+  border-radius: 0.5vh; /* Rounded corners */
+  text-align: center; /* Center the text inside the box */
+  min-width: 4vh; /* Ensure the box has a minimum width */
+}
+
+.check-inputs{
+  display: flex; align-items: center;
+}
+/* Popup container (hidden by default) */
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth fade-in/out */
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.left-section h3, h2{
+  color: white;
+}
+
+/* Popup content */
+.popup-content {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background-color: #343434;
+  padding: 30px; /* Increase padding for better spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80vh; /* Increase width */
+  height: 90vh; /* Increase height */
+  text-align: center;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.about-popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth fade-in/out */
+}
+
+.about-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.about-popup-content{
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background-color: #343434;;
+  padding: 30px; /* Increase padding for better spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 85vh; /* Increase width */
+  height: auto; /* Increase height */
+  text-align: left;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  color: white;
+}
+
+.about-section h3 {
+  margin-top: 20px; /* Add spacing above each section heading */
+  margin-bottom: 10px; /* Add spacing below each section heading */
+  font-size: 1.5rem; /* Optional: Adjust the font size */
+}
+
+.about-section p {
+  margin-bottom: 20px; /* Add spacing below each paragraph */
+  line-height: 1.6; /* Optional: Improve readability with line height */
+}
+
+.contact-popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth fade-in/out */
+}
+
+.contact-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-popup-content {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background-color: #343434;
+  padding: 30px; /* Increase padding for better spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  gap: 1rem;
+  color: white;
+}
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Scrollable container inside the popup */
+.popup-scrollable {
+  max-height: 70vh; /* Set a fixed height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+  gap: 10px; /* Add spacing between boxes */
+  padding: 10px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1300px) { /*Formatted for 1-2 boxes*/
+  .popup-scrollable {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 1-2 boxes per row */
+  }
+  .popup-content {
+      width: 90%; /* Make the popup fit within the screen */
+      max-width: 70vh; /* Limit the maximum width */
+      height: auto; /* Allow the height to adjust dynamically */
+      padding: 10px; /* Reduce padding inside the popup */
+  }
+  .about-popup-content, .contact-popup-content {
+      width: 90%; /* Make the popup fit within the screen */
+      max-width: 70vh; /* Limit the maximum width */
+      height: auto; /* Allow the height to adjust dynamically */
+      padding: 10px; /* Reduce padding inside the popup */
+  }
+  .selectable-box {
+      min-height: 80px; /* Reduce the height of the boxes */
+      padding: 5px; /* Reduce padding inside the boxes */
+      font-size: 12px; /* Reduce font size for text inside the boxes */
+  }
+
+  .selectable-box img {
+      max-height: 20vh; /* Reduce the size of the images */
+      max-width: 20vh; /* Reduce the size of the images */
+      width: auto; /* Maintain aspect ratio */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 768px) { /* Adjust layout for small screens */
+  .popup-scrollable {
+      grid-template-columns: 1fr; /* 1 box per row */
+      padding: 5px; /* Reduce padding inside the popup */
+  }
+
+  .popup-content {
+      width: 90%; /* Make the popup fit within the screen */
+      max-width: 400px; /* Limit the maximum width */
+      height: auto; /* Allow the height to adjust dynamically */
+      padding: 10px; /* Reduce padding inside the popup */
+  }
+  .about-popup-content, .contact-popup-content {
+      width: 90%; /* Make the popup fit within the screen */
+      max-width: 400px; /* Limit the maximum width */
+      height: auto; /* Allow the height to adjust dynamically */
+      padding: 10px; /* Reduce padding inside the popup */
+  }
+
+  .selectable-box {
+      min-height: 80px; /* Reduce the height of the boxes */
+      padding: 5px; /* Reduce padding inside the boxes */
+      font-size: 12px; /* Reduce font size for text inside the boxes */
+  }
+
+  .selectable-box img {
+      max-height: 20vh; /* Reduce the size of the images */
+      max-width: 20vh; /* Reduce the size of the images */
+      width: auto; /* Maintain aspect ratio */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.selectable-box { /* button styling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #545454;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  color: white;
+  /* make the text bold*/
+  font-weight: bold;
+}
+
+.selectable-box:hover {
+  background-color: #adacac;
+  transform: scale(1.005); /* Slight zoom effect on hover */
+}
+
+.selectable-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.selectable-box span {
+  font-size: 14px;
+  text-align: center;
+}
+  /* Parent container for the layout */
+.main-container {
+  display: flex;
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  padding: 1rem;
+  box-sizing: border-box;
+  flex: 1; /* Allow the container to grow */
+}
+
+/* Left section with input fields on desktop */
+.left-section {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 60%; /* Take up 40% of the screen width */
+  gap: 2rem; /* Add spacing between calc-inputs and packs */
+}
+
+.right-section {
+  display: flex; /* Align children horizontally */
+  width: 100%; /* Take up the full width of the parent container */
+  align-items: center; /* Align items to the top */
+  margin-right: 2vh;
+}
+
+/* Right section calculations table on desktop */
+#result-popup{
+  width: 90%; 
+  height: 100%;
+  background-color: #343434; 
+  border: 1px solid #1d8eff; /* Optional border */
+  padding: 0.5rem;
+  margin-top: 2vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-left: 10vh;
+  
+}
+
+.totalpyro{
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}
+
+.amount-box-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+  position: relative;
+}
+
+.glowing{
+  animation: glowing-box-shadow 3s linear infinite; /* Infinite animation */
+}
+
+.yellow-glow {
+  position: relative;
+  border: 2px solid transparent; /* Transparent border to allow the glow effect */
+  border-radius: 8px; /* Optional: Rounded corners */
+  animation: yellow-glow-animation 3s linear infinite; /* Infinite animation */
+}
+
+@keyframes yellow-glow-animation {
+  0% {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.3); /* Glow at the top */
+  }
+  25% {
+      box-shadow: 0 0 15px 4px rgba(255, 255, 0, 0.3); /* Glow intensifies */
+  }
+  50% {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.3); /* Glow at the bottom */
+  }
+  75% {
+      box-shadow: 0 0 15px 4px rgba(255, 255, 0, 0.3); /* Glow intensifies */
+  }
+  100% {
+      box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.3); /* Glow completes rotation */
+  }
+}
+
+.highlight{
+  background-color: skyblue;
+}
+
+@keyframes glowing-box-shadow {
+  0% {
+      box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.6);
+  }
+  25% {
+      box-shadow: 0 0 15px 3px rgb(0, 217, 255);
+  }
+  50% {
+      box-shadow: 0 0 20px 4px rgb(255, 255, 255);
+  }
+  75% {
+      box-shadow: 0 0 15px 3px rgb(0, 217, 255);
+  }
+  100% {
+      box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.6);
+  }
+}
+
+  .packdisplay{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+  }
+
+  /* Raids lists section */
+  .raidslist {
+      display: none;
+      flex-direction: column; /* Arrange content in a column layout */
+      width: 100%;
+      background-color: #343434; 
+      border: 1px solid #006aff; /* Optional border */
+      padding: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+      overflow-y: auto; /* Allow scrolling if content overflows */
+      margin-top: vh;
+  }
+
+  .remainder-area{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.1rem;
+      width: 90%;
+  }
+
+  .assumptions{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      border: 1px solid rgb(26, 114, 255);
+      background-color: #343434;;
+      color: white;
+      font-size: 1rem;
+      margin-top: 1rem;
+      width: 80%;
+  }
+
+  
+    /* Responsive design for smaller screens aka mobile(originally 768px)*/
+  @media (max-width: 1400px) {
+      .right-section {
+          flex-direction: column; /* Stack result-popup and raidslist vertically */
+      }
+      .raidslist {
+        width: 100%; /* Full width for smaller screens */
+        margin-left: 0; /* Remove left margin */
+      }
+      .main-container {
+          flex-direction: column; /* Stack sections vertically */
+        }
+      .left-section, #result-popup {
+          width: 100%; /* Full width for both sections */
+          margin-left: 0; /* Remove left margin */
+      }
+      .remainder-area{
+          flex-direction: column;
+      }
+      .assumptions{
+        margin-left: 15vh;
+      }
+  }
+
+#upcoming-banner-btn{
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #49CAFF; /* Button background color */
+  color: #192F5E; /* Text color */
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem; /* Rounded corners */
+  transform: skew(-8deg); /* Parallelogram effect */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+  #upcoming-banner-btn:hover {
+  background-color: #49CAFF; /* Darker background on hover */
+  transform: scale(1.005) skew(-8deg); /* Slightly enlarge on hover add a shadow below button*/
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2); 
+}
+  #select-header{
+      font-family: 'Verdana', sans-serif;
+      max-height: 6vh;
+      margin-top: 3.5vh;
+      display: inline-block;
+      padding: 0.1rem 3rem;
+      background-color: #1F3E5D; /* Button background color */
+      color: white; /* Text color */
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.5rem; /* Rounded corners */
+      transform: skew(-8deg); /* Parallelogram effect */
+  }
+.calculations{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vh;
+  gap: 0.1rem;
+  font-size: 1rem;
+  background-color: #343434;
+  border: 1px solid white;
+  color: white;
+}
+
+.calc-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid gray;
+}
+
+.calc-table {
+  width: 100%; /* Make the table take up the full width */
+  border-collapse: collapse; /* Remove gaps between table cells */
+  margin-top: 1rem; /* Add spacing above the table */
+}
+
+.calc-table th, .calc-table td {
+  border: 1px solid white; /* Add a light border to cells */
+  padding-top: 1vh;
+  text-align: center; /* Align text to the left */
+}
+
+.calc-table th {
+  background-color: #343434;
+  font-weight: bold; /* Make header text bold */
+}
+
+.calc-table tr:nth-child(even) {
+  background-color: #343434;
+}
+
+.calc-table tr:hover {
+  background-color: #343434;
+}
+
+.calc-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5vh;
+  height: 4vh;
+  margin: 0 auto; /* Center the image container horizontally */
+  position: relative; /* Position the number box relative to the image */
+  background-color: #343434;
+  background-image: url("Item_Card.png"); /* Set the background image */
+  background-size: 8vh; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  border-radius: 1vh;
+}
+
+.daily-calc-rate{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#calculate-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #F9DC3F; /* Button background color */
+  color: #5C3D00; /* Text color */
+  font-size: 1.7rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem; /* Rounded corners */
+  transform: skew(-8deg); /* Parallelogram effect */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#calculate-btn:hover {
+  background-color: #F9DC3F; /* Darker background on hover */
+  transform: scale(1.005) skew(-8deg); /* Slightly enlarge on hover add a shadow below button*/
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2); 
+}
+
+#calculate-btn:disabled {
+  background-color: lightgray; /* Disable button color */
+  color: grey; /* Text color */
+  cursor: not-allowed /* Disable cursor */
+}
+
+.total-calc-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vh;
+  height: 8vh;
+  margin: 0 auto; /* Center the image container horizontally */
+  position: relative; /* Position the number box relative to the image */
+  background-color: #343434;
+  background-image: url("Item_Card.png"); /* Set the background image */
+  background-size: 16vh; /* Ensure the image covers the container */
+  background-position: center; /* Center the image */
+  border-radius: 1vh;
+}
+
+.total-side-image{
+  width: 10vh;
+  height: 8vh;
+}
+
+.total-number-box{
+  position: absolute;
+  bottom: -1.02vh; /* Position the box slightly below the image */
+  left: 50%; /* Center the box horizontally under the image */
+  transform: translateX(-50%); /* Adjust for centering */
+  background-color: #333; /* Dark background color */
+  color: white; /* White text color */
+  font-size: 1.9vh; /* Adjust text size */
+  font-weight: bold; /* Make the text bold */
+  padding: 0.12vh 0.5vh; /* Add padding inside the box */
+  border-radius: 0.5vh; /* Rounded corners */
+  text-align: center; /* Center the text inside the box */
+  min-width: 2vh; /* Ensure the box has a minimum width */
+  max-height: 4vh;
+}
+
+.current-input{
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  background-color: #343434;
+  margin: 0.6rem;
+  width: 60%;
+  height: auto;
+  color: white;
+}
+
+/* Responsive */
+@media(max-width: 1600px){
+  header{
+      padding: 1rem 2rem;
+      gap: 2rem;
+  }
+  .nav-bar{
+      justify-content: left;
+      width: 100%;
+}
+  .about .about-container{
+      gap: 3rem;
+  }
+  .experience-info{
+      flex-direction: column;
+  }
+  .input-box input{
+      padding: 2rem 5rem;
+      font-size: 2.5rem;
+  }
+  .input input::placeholder{
+      font-size: 2.5rem;
+  }
+  .input-box i{
+      font-size: 2.5rem;
+  }
+}
+@media(max-width: 768px){
+  header{
+      gap: 1rem;
+      padding: 1rem 1rem;
+  }
+  header h6{
+    display: none;
+}
+  header .logo{
+      font-size: 1rem;
+  }
+  header .visit-btn{
+      display: none;
+  }
+  .about-container{
+      flex-direction: column;
+  }
+  .input-box input{
+      padding: 1rem 2rem;
+      font-size: 1.8rem;
+  }
+  .input-box input::placeholder{
+      font-size: 1.5rem;
+  }
+  .input-box i{
+      display: none;
+  };
+  .grid{
+      grid-template-columns: repeat(1,1fr);
+  }
+  .experience-info img{
+      width: 70vw;
+  }
+}
+@media(max-width: 600px){
+  header #menu-icon{
+      display: block;
+  }
+  header h6{
+      display: none;
+  }
+  .nav-links{
+      position: absolute;
+      top: 100%;
+      margin-top: 1rem;
+      width: 100%;
+      padding: 1rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 3rem;
+      display: none;
+  }
+  .nav-links li{
+      margin-top: 1.5rem;
+      padding: 1rem;
+  }
+  .nav-links.active{
+      display: block;
+  }
+  header{
+      padding: 1rem 5rem;
+      gap: 8rem;
+  }
+  header .logo{
+      font-size: 1.5rem;
+  }
+  .about-container img{
+      width: 80vw;
+  }
+  .input-box input{
+      padding: 0.5rem 3rem;
+      width: 80%;
+      font-size: 1.5rem;
+  }
+  .input-box input::placeholder{
+      font-size: 2rem;
+  }
+  footer ul{
+      gap: 1rem;
+  };
+}
