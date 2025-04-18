@@ -914,8 +914,6 @@ async function getGrandAssaultList() {
               calcResult.style.display = 'block';
               const resultPyro = document.getElementById('resultpyro');
               resultPyro.textContent = `x${totalPyroxene + value}`;
-              const resultPyro2 = document.getElementById('resultpyro2');
-              resultPyro2.textContent = `x${totalPyroxene + value}`;
             }
             );
           }

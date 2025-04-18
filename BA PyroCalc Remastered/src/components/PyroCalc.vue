@@ -12,16 +12,6 @@ onMounted(() => {
 <template>
   <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Easy to use tool to calculate and plan your Pyroxene earnings for upcoming banners!" />
-    <meta property="og:title" content="Pyroxene Calculator for Blue Archive">
-    <meta property="og:description" content="Easy to use tool to calculate and estimate your Pyroxene earnings for upcoming banners! Simply check your pyroxene earnings, and hit calculate!"> 
-    <title>Blue Archive Pyroxene Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/arona-googleicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  </head>
   <body>
 
 <div class = "main-container">
