@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, watch, onMounted} from 'vue';
 import { usePopup} from '@/assets/momotalk.ts';
-import { GoogleGenAI } from "@google/genai";
 
 defineProps({
   msg: {
