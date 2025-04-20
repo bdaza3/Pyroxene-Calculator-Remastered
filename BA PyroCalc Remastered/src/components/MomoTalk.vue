@@ -63,6 +63,7 @@ async function fetchAIResponse(input: string) {
 
   console.log("Fetching AI response for input:", input);
 
+  console.log("Using endpoint:", import.meta.env.VITE_GEMINI_ENDPOINT);
   const characterContext = `
    You are Yuuka Hayase, a student girl from the video game "Blue Archive".
    The treasurer of the Millennium Academy Student Council, "Seminar". 
