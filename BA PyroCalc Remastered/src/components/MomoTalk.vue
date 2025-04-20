@@ -114,7 +114,7 @@ async function fetchAIResponse(input: string) {
       return aiText;
     } else {
       console.error('Error in AI response:', result);
-      return 'Error fetching response....';
+      return 'Error fetching good response.';
     }
   } catch (error) {
     console.error('Error fetching AI response:', error);
