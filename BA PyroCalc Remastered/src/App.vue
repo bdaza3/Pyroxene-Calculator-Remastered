@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import YuukaHero from './components/YuukaHero.vue'
 import PyroCalc from './components/PyroCalc.vue'
+import MomoTalk from './components/MomoTalk.vue'
 </script>
 
 <template>
   <main class = "page">
     <YuukaHero msg="Pyroxene Calculator"/>
+    <MomoTalk msg="Bruh moment"/>
     <PyroCalc/>
   </main>
 </template>
