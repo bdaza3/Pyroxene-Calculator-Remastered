@@ -173,7 +173,7 @@ watch(chatMessages, () => {
               <div class="aicontainer">
                 <p style="font-weight: bold;">Yuuka</p>
                 <div class="airesponsebox">
-                  <p>Hello,Sensei. It's Yuuka. What can I assist you with today?</p>
+                  <p>Hello, Sensei. It's Yuuka. What can I assist you with today?</p>
                 </div>
               </div>
             </div>
