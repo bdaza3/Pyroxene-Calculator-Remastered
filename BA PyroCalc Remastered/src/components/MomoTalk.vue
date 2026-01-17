@@ -16,35 +16,35 @@ const { isPopupVisible, togglePopup } = usePopup();
 //Chat logic
 const message = ref(""); // Store the user message
 const chatMessages = ref<{ sender: string; content: string }[]>([]);
-const chatboxRef = ref<HTMLElement | null>(null); // Reference to the chatbox DOM element
-const isButtonDisabled = ref(false); // Track whether the send button is disabled
-const momobuttonRef = ref<HTMLElement | null>(null); // Reference to the momobutton image
+const chatboxRef = ref<HTMLElement | null>(null); //reference to the chatbox DOM element
+const isButtonDisabled = ref(false); //track whether the send button is disabled
+const momobuttonRef = ref<HTMLElement | null>(null); //reference to the momobutton image
 
-// Function to trigger the shake animation
+//function to trigger the shake animation
 function triggerShake() {
   if (momobuttonRef.value) {
     momobuttonRef.value.classList.add('shake'); // Add the shake class
     setTimeout(() => {
-      momobuttonRef.value?.classList.remove('shake'); // Remove the shake class after the animation
-    }, 500); // Match the duration of the shake animation (0.5s)
+      momobuttonRef.value?.classList.remove('shake'); //remove the shake class after the animation
+    }, 500);
   }
 }
 
 onMounted(() => {
   setInterval(() => {
     triggerShake();
-  }, 5000); // Trigger the shake every 5 seconds
+  }, 5000); //shake every 5 seconds
 });
 
 
 async function sendMessagetoAI(){
   console.log("Sending message to AI:", message.value); 
-  if (message.value.trim() === '') return; // Prevent sending empty messages
+  if (message.value.trim() === '') return; //prevent sending empty messages
 
   isButtonDisabled.value = true; // Disable the button immediately after sending
   chatMessages.value.push({ sender: 'Sensei', content: message.value });
 
-  // Call the function to fetch AI response
+  //call the function to fetch AI response
   const aiResponse = await fetchAIResponse(message.value);
 
   chatMessages.value.push({ sender: 'Yuuka', content: aiResponse });
@@ -217,7 +217,6 @@ watch(chatMessages, () => {
   100% { transform: translateX(0); }
 }
 
-/* Shake class */
 .shake {
   animation: shake 0.5s ease-in-out; /* 0.5s duration for the shake effect */
 }
@@ -228,10 +227,10 @@ watch(chatMessages, () => {
   right: 20px;
   background-color: transparent;
   border: none;
-  border-radius: 50%; /* Circular button */
+  border-radius: 50%; /* circular button */
   padding: 10px;
   cursor: pointer;
-  z-index: 1000; /* Ensure the button is above other elements */
+  z-index: 1000; /* ensure the button is above other elements */
 }
 .popup-overlay {
   position: fixed;

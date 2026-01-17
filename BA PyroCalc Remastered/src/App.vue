@@ -7,7 +7,7 @@ import MomoTalk from './components/MomoTalk.vue'
 <template>
   <main class = "page">
     <YuukaHero msg="Pyroxene Calculator"/>
-    <MomoTalk msg="Bruh moment"/>
+    <!-- <MomoTalk msg="Bruh moment"/> -->
     <PyroCalc/>
   </main>
 </template>

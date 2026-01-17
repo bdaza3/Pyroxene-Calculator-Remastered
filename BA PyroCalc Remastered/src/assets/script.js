@@ -228,7 +228,7 @@ let selectedStartDate = 0;
   const gapReductionStartDate = new Date("2025-02-08"); // Date of banner start when the gap reduction started
   let today = new Date(); // Get today's date
   const daysSinceReductionStarted = Math.floor((today - gapReductionStartDate) / (1000 * 60 * 60 * 24));
-  const reductionRate = 7 / 51; // Days reduced per day (lost 9 days in 52 days since start)
+  const reductionRate = 7 / 53; // Days reduced per day (lost 9 days in 52 days since start)
   const daysReduced = daysSinceReductionStarted * reductionRate; // Total days reduced since gap reduction started
   const originalGap = 180; // 6 months in days
   const adjustedGap = originalGap - daysReduced; // Adjusted gap based on reduction rate
@@ -280,9 +280,9 @@ async function getBanners() {
             }
           }
 
-          if (character.includes("Rio")) { //Special case for Rio (temporary until the character banner passes)
-            character = "Rio";
-          }
+          // if (character.includes("Rio")) { //Special case for Rio (temporary until the character banner passes)
+          //   character = "Rio";
+          // }
 
               //add adjusted gap to the start date for global timings
               startDate.setDate(startDate.getDate() + adjustedGap);
@@ -303,7 +303,7 @@ async function getBanners() {
               const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
               const numDays = Math.round(Math.abs((today - startDate) / oneDay));
               
-              // Only keep banners that start in the future
+              //only keep banners that start in the future
               if (startDate >= today) {
                   banners.push({image, character, period, startDate, isLimited, numDays});
               }
