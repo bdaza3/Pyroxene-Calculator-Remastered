@@ -2,17 +2,17 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { usePyroDashboard } from '@/composables/usePyroDashboard'
-import { HomeIcon, CalculatorIcon, Calendar, ChartColumn , Database, LogOut } from "lucide-react";
+import { Home, Calculator, Calendar, BarChart2, Database, LogOut, Sun, Moon } from '@lucide/vue'
 
 const route = useRoute()
 const dashboard = usePyroDashboard()
 const isLightMode = ref(false)
 
 const navItems = [
-  { to: '/dashboard', label: 'Dashboard', icon: HomeIcon },
-  { to: '/calculator', label: 'Calculator', icon: CalculatorIcon },
+  { to: '/dashboard', label: 'Dashboard', icon: Home },
+  { to: '/calculator', label: 'Calculator', icon: Calculator },
   { to: '/history', label: 'History', icon: Calendar },
-  { to: '/analytics', label: 'Analytics', icon: ChartColumn },
+  { to: '/analytics', label: 'Analytics', icon: BarChart2 },
   { to: '/database', label: 'Database', icon: Database },
   { to: '/settings', label: 'Settings', icon: LogOut },
 ]
@@ -54,18 +54,18 @@ watch(isLightMode, (value) => {
           class="sidebar-link"
           active-class="is-active"
         >
-          <span class="sidebar-icon">{{ item.icon }}</span>
+          <span class="sidebar-icon"><component :is="item.icon" :size="18" /></span>
           <span>{{ item.label }}</span>
         </RouterLink>
       </nav>
 
       <div class="sidebar-footer">
         <button class="sidebar-utility" type="button" @click="isLightMode = !isLightMode">
-          <span class="sidebar-icon">{{ isLightMode ? 'D' : 'L' }}</span>
-          <span>{{ isLightMode ? 'Dark Mode' : 'Light Mode' }}</span>
+          <span class="sidebar-icon"><component :is="isLightMode ? Sun : Moon" :size="18" /></span>
+          <span>{{ isLightMode ? 'Light Mode' : 'Dark Mode' }}</span>
         </button>
         <button class="sidebar-utility signout" type="button">
-          <span class="sidebar-icon">{{ LogOut }}</span>
+          <span class="sidebar-icon"><component :is="LogOut" :size="18" /></span>
           <span>Sign Out</span>
         </button>
       </div>
