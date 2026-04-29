@@ -1,4 +1,4 @@
-declare module '@/assets/script.js' {
+declare module '@/scripts/script.js' {
     export const navbuttons: any;
     export const menuDropdown: any;
   }

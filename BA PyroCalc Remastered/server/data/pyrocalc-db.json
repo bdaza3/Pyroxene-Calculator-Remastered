@@ -1,0 +1,302 @@
+{
+  "accounts": [
+    {
+      "id": "acct-main",
+      "name": "Sensei Main",
+      "region": "Global",
+      "level": 91,
+      "joinedAt": "2024-07-14",
+      "pyroxene": 23840,
+      "monthlyBudget": 35,
+      "goalLabel": "Summer Fes reserve",
+      "tacticalRank": "rank200",
+      "totalAssaultTier": "gold",
+      "includeGrandTickets": true
+    },
+    {
+      "id": "acct-alt",
+      "name": "Raid Alt",
+      "region": "NA",
+      "level": 84,
+      "joinedAt": "2025-02-01",
+      "pyroxene": 14520,
+      "monthlyBudget": 10,
+      "goalLabel": "Raid flex account",
+      "tacticalRank": "rank1000",
+      "totalAssaultTier": "silver",
+      "includeGrandTickets": false
+    },
+    {
+      "id": "acct-f2p",
+      "name": "F2P Tracker",
+      "region": "EU",
+      "level": 78,
+      "joinedAt": "2025-09-12",
+      "pyroxene": 9310,
+      "monthlyBudget": 0,
+      "goalLabel": "No-spend planning",
+      "tacticalRank": "rank4000",
+      "totalAssaultTier": "bronze",
+      "includeGrandTickets": false
+    }
+  ],
+  "banners": [
+    {
+      "id": "banner-kisaki",
+      "name": "Administrative Brilliance",
+      "student": "Kisaki",
+      "startDate": "2026-05-06",
+      "endDate": "2026-05-20",
+      "limited": false,
+      "featuredType": "Standard",
+      "forecastConfidence": "High"
+    },
+    {
+      "id": "banner-shiroko",
+      "name": "Midnight Resort Ops",
+      "student": "Shiroko (Swimsuit)",
+      "startDate": "2026-05-20",
+      "endDate": "2026-06-03",
+      "limited": true,
+      "featuredType": "Limited",
+      "forecastConfidence": "Medium"
+    },
+    {
+      "id": "banner-mika",
+      "name": "Sanctum of Miracles",
+      "student": "Mika",
+      "startDate": "2026-06-17",
+      "endDate": "2026-07-01",
+      "limited": true,
+      "featuredType": "Fes",
+      "forecastConfidence": "High"
+    },
+    {
+      "id": "banner-hina",
+      "name": "Command After Hours",
+      "student": "Hina (Dress)",
+      "startDate": "2026-07-08",
+      "endDate": "2026-07-22",
+      "limited": true,
+      "featuredType": "Limited",
+      "forecastConfidence": "Medium"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "snap-1",
+      "accountId": "acct-main",
+      "recordedAt": "2026-01-01",
+      "pyroxene": 14220,
+      "note": "New year stash"
+    },
+    {
+      "id": "snap-2",
+      "accountId": "acct-main",
+      "recordedAt": "2026-02-01",
+      "pyroxene": 16840,
+      "note": "After raid cycle"
+    },
+    {
+      "id": "snap-3",
+      "accountId": "acct-main",
+      "recordedAt": "2026-03-01",
+      "pyroxene": 19310,
+      "note": "Event clear"
+    },
+    {
+      "id": "snap-4",
+      "accountId": "acct-main",
+      "recordedAt": "2026-04-01",
+      "pyroxene": 22190,
+      "note": "Pack month ended"
+    },
+    {
+      "id": "snap-5",
+      "accountId": "acct-main",
+      "recordedAt": "2026-04-24",
+      "pyroxene": 23840,
+      "note": "Current balance"
+    },
+    {
+      "id": "snap-6",
+      "accountId": "acct-alt",
+      "recordedAt": "2026-02-01",
+      "pyroxene": 9800,
+      "note": "Alt started saving"
+    },
+    {
+      "id": "snap-7",
+      "accountId": "acct-alt",
+      "recordedAt": "2026-03-10",
+      "pyroxene": 11940,
+      "note": "Won PvP climb"
+    },
+    {
+      "id": "snap-8",
+      "accountId": "acct-alt",
+      "recordedAt": "2026-04-24",
+      "pyroxene": 14520,
+      "note": "Current balance"
+    },
+    {
+      "id": "snap-9",
+      "accountId": "acct-f2p",
+      "recordedAt": "2026-03-15",
+      "pyroxene": 6420,
+      "note": "Fresh F2P log"
+    },
+    {
+      "id": "snap-10",
+      "accountId": "acct-f2p",
+      "recordedAt": "2026-04-24",
+      "pyroxene": 9310,
+      "note": "Current balance"
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan-1",
+      "accountId": "acct-main",
+      "bannerId": "banner-mika",
+      "title": "Mika spark reserve",
+      "targetPyroxene": 24000,
+      "reservedPyroxene": 1800,
+      "status": "watching",
+      "notes": "Hold raid ticket value as emergency cushion.",
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "plan-2",
+      "accountId": "acct-alt",
+      "bannerId": "banner-shiroko",
+      "title": "Shiroko swimsuit gamble",
+      "targetPyroxene": 12000,
+      "reservedPyroxene": 0,
+      "status": "draft",
+      "notes": "Only pull if trend stays positive.",
+      "createdAt": "2026-04-18"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn-1",
+      "accountId": "acct-main",
+      "recordedAt": "2026-04-05",
+      "amount": 1650,
+      "type": "income",
+      "category": "Event",
+      "note": "Cherry Blossom event clear"
+    },
+    {
+      "id": "txn-2",
+      "accountId": "acct-main",
+      "recordedAt": "2026-04-14",
+      "amount": -2400,
+      "type": "spend",
+      "category": "Recruitment",
+      "note": "Top-up for selector spark"
+    },
+    {
+      "id": "txn-3",
+      "accountId": "acct-main",
+      "recordedAt": "2026-04-22",
+      "amount": 1850,
+      "type": "income",
+      "category": "Grand Assault",
+      "note": "Ticket value included"
+    },
+    {
+      "id": "txn-4",
+      "accountId": "acct-alt",
+      "recordedAt": "2026-04-12",
+      "amount": 1450,
+      "type": "income",
+      "category": "Total Assault",
+      "note": "Silver bracket payout"
+    },
+    {
+      "id": "txn-5",
+      "accountId": "acct-f2p",
+      "recordedAt": "2026-04-20",
+      "amount": 600,
+      "type": "income",
+      "category": "Story",
+      "note": "Bond and story cleanup"
+    }
+  ],
+  "schedule": [
+    {
+      "id": "sched-1",
+      "kind": "maintenance",
+      "name": "Version maintenance",
+      "startDate": "2026-05-05",
+      "endDate": "2026-05-05",
+      "pyroxeneReward": 840,
+      "note": "Average compensation estimate"
+    },
+    {
+      "id": "sched-2",
+      "kind": "event",
+      "name": "Hot Spring Development Log",
+      "startDate": "2026-05-06",
+      "endDate": "2026-05-20",
+      "pyroxeneReward": 1650,
+      "note": "Full clear estimate"
+    },
+    {
+      "id": "sched-3",
+      "kind": "totalAssault",
+      "name": "Kaiten FX Mk.0",
+      "startDate": "2026-05-13",
+      "endDate": "2026-05-19",
+      "pyroxeneReward": 1650,
+      "note": "Gold bracket sample payout"
+    },
+    {
+      "id": "sched-4",
+      "kind": "grandAssault",
+      "name": "Hieronymus Grand Assault",
+      "startDate": "2026-05-27",
+      "endDate": "2026-06-02",
+      "pyroxeneReward": 1850,
+      "note": "Assumes ticket conversion enabled"
+    },
+    {
+      "id": "sched-5",
+      "kind": "maintenance",
+      "name": "Fes preparation maintenance",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "pyroxeneReward": 840,
+      "note": "Average compensation estimate"
+    },
+    {
+      "id": "sched-6",
+      "kind": "event",
+      "name": "Millennium Summer Survey",
+      "startDate": "2026-06-17",
+      "endDate": "2026-07-01",
+      "pyroxeneReward": 1650,
+      "note": "Full clear estimate"
+    },
+    {
+      "id": "sched-7",
+      "kind": "totalAssault",
+      "name": "Binah Urban",
+      "startDate": "2026-06-24",
+      "endDate": "2026-06-30",
+      "pyroxeneReward": 1650,
+      "note": "Gold bracket sample payout"
+    },
+    {
+      "id": "sched-8",
+      "kind": "grandAssault",
+      "name": "Shiro & Kuro Grand Assault",
+      "startDate": "2026-07-08",
+      "endDate": "2026-07-14",
+      "pyroxeneReward": 1850,
+      "note": "Assumes ticket conversion enabled"
+    }
+  ]
+}
